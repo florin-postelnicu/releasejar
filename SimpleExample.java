@@ -1,5 +1,7 @@
 package com.exam.bicycle;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class SimpleExample  extends Frame{
     SimpleExample(){
@@ -29,6 +31,12 @@ public class SimpleExample  extends Frame{
     }
 
     public static void main(String[] args) {
-        SimpleExample fr = new SimpleExample();
+        SimpleExample frame = new SimpleExample();
+        frame.addWindowListener(new WindowAdapter() {
+            public  void windowClosing(WindowEvent we){
+                System.exit(0);
+            }
+        });
+
     }
 }
