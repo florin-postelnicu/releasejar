@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class InstancesFrame extends Frame{
+public class InstancesFrame extends  Frame{
     InstancesFrame() {
         // Creating Frame
         Frame fr = new Frame();
@@ -36,12 +36,14 @@ public class InstancesFrame extends Frame{
         fr.setVisible(true);}
 
 
-        public static void main (String[] args){
-            InstancesFrame inf = new InstancesFrame();
-            inf.addWindowListener(new WindowAdapter() {
+    public static void main(String[] args) {
 
-                public void windowClosed(WindowEvent e) {
-                    super.windowClosed(e);
+
+            InstancesFrame fr = new InstancesFrame();
+            fr.addWindowListener(new WindowAdapter() {
+
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
                 }
             });
 
