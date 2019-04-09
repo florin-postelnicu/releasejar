@@ -1,6 +1,8 @@
 package com.exercises.javaprograms;
 
 // Use accessor methods to set and get private members
+// Use constructor for both parent class and subclass
+// Use super to setup the constructor of the subclass
 
 // A class for two dimensional objects
 class TwoDShape {
@@ -26,7 +28,7 @@ class TwoDShape {
 // A subclass of TwoDShape for triangles.
 class Triangle extends TwoDShape {
     String style;
-
+    // The Triangle's constructor has style on top of the TwoDShape
     Triangle( String s, double w, double h) {
         super(w, h); // call superclass constructor
         style = s;
