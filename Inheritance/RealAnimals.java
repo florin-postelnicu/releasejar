@@ -26,6 +26,9 @@ class AnimalsMam{
     void showCharacter() {
         System.out.println("The Name is :" + name + "\n Age is " + age + "\n Area in acres needed is :" + area);
     }
+    void showKinship(){
+        System.out.println("I am an animal");
+    }
 }
 
 class Felines extends AnimalsMam {
@@ -42,6 +45,9 @@ class Felines extends AnimalsMam {
     }
     void showVoice() {
         System.out.println("The Feline says to you : " + voice);
+    }
+    void showKinship(String msg){
+        System.out.println(msg + getName());
     }
 
 }
@@ -81,9 +87,21 @@ class Tigers extends Felines{
     }
     @Override // It is good to use the annotation, since it informs the compiler
               // that the element is meant to override an element declared in superclass.
+             //
+             // Method overriding occurs only when the signatures of the two methods are identical.
+            // If they are not, then the two methods are simply overloaded.
+              // The Rules are:
+              // If super it is used , then the method will be executed starting hierarchically;
+              // from the parent down to the cild.
+              //
+               // If super is not used, then tha LAST definition of the method it is used across the program
+               // here, the Tigers.showCharacter() will prevail for all calls.
     void showCharacter(){
 
-        super.showCharacter();
+        super.showCharacter();// Using super to have also the version form the superclass
+                              // It is interesting to see what happens if this line is commented :
+                              // all methods showCharacter(0  in the program will be overridden
+                              // by this new one
         System.out.println("This tiger 's name is " + getName() + "\n at a tender time in life of " + getAge() +
                 "\n and roaming an areal of " + getArea());
     }
@@ -154,7 +172,14 @@ public class RealAnimals {
         tg1.setName(zizi.getName());
         System.out.println("tg1 tiger's name must be Zizi , but  it is   " + tg1.getName());
 
+        // Overloading
 
+        // The two methods bellow have different signature showKinship() - has no parameters,
+        // showKinship(String msg) has a parameter named msg.
+
+
+        zizi.showKinship();
+        zizi.showKinship(" I am a Feline, and my name is :");
         // Cats miaunel = tiggy; it is not going to compile,
         // Incompatible types, a reference variable of class type can not
         // refer to an object of another class type
