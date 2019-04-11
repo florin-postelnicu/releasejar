@@ -1,5 +1,20 @@
 package com.exercises.javaprograms;
+/*
+Polymorphism and Inheritance in Java
 
+Overridden methods allow Java to support run-time polymorphism (dynamic method dispatch).
+Polymorphism is essential to object-oriented programming for one reason:
+it allows a general class to specify methods that will be common to all of its derivatives,
+while allowing subclasses to define the specific implementation of some or all of those methods.
+ Overridden methods are another way that Java implements the “one interface, multiple methods” aspect of polymorphism.
+ Part of the key to successfully applying polymorphism is understanding that the superclasses and subclasses
+ form a hierarchy that moves from lesser to greater specialization.
+ Used correctly, the superclass provides all elements that a subclass can use directly.
+ It also defines those methods that the derived class must implement on its own.
+ This allows the subclass the flexibility to define its own methods, yet still enforces a consistent interface.
+Thus, by combining inheritance with overridden methods,
+ a superclass can define the general form of the methods that will be used by all of its subclasse
+ */
 class AnimalsMam{
     private String name;
     private int age;// Age
@@ -23,9 +38,12 @@ class AnimalsMam{
     void setArea(int b){ area = b;}
 
     // Display characteristics
+
+    // This method will be overridden in subclass Tigers
     void showCharacter() {
         System.out.println("The Name is :" + name + "\n Age is " + age + "\n Area in acres needed is :" + area);
     }
+    // This method will be overridden in Felines , and Cats subclasses
     void showKinship(){
         System.out.println("I am an animal");
     }
@@ -176,10 +194,8 @@ public class RealAnimals {
         tg1.setName(zizi.getName());
         System.out.println("tg1 tiger's name must be Zizi , but  it is   " + tg1.getName());
 
-        // Overloading
 
-        // The two methods bellow have different signature showKinship() - has no parameters,
-        // showKinship(String msg) has a parameter named msg.
+
 
         //When an overridden method is called through a superclass reference, Java determines which version
         // of the method to execute (Dynamic Method Dispatch) based upon the type of the object being referred to
@@ -199,6 +215,13 @@ public class RealAnimals {
         katie.showKinship();
         AnimalsMam darnel = tg1;
         darnel.showKinship();
+        System.out.println();
+        System.out.println(katie.getClass());
+        System.out.println();
+        System.out.println(katie.equals(zizi));
+        System.out.println();
+        System.out.println(zizi.toString());
+        System.out.println(zizi);
 
         // Cats miaunel = tiggy; it is not going to compile,
         // Incompatible types, a reference variable of class type can not
