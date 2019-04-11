@@ -66,6 +66,10 @@ class Cats extends Felines {
     }
     void showRelation() {
         System.out.println("Your cat is an inconspicuous  " + relation  + " with " + lives + " lives still to fulfil");
+
+    }
+    void showKinship(){
+        System.out.println("In top of everything,  I am a COOL Cat!");
     }
 
 
@@ -177,9 +181,25 @@ public class RealAnimals {
         // The two methods bellow have different signature showKinship() - has no parameters,
         // showKinship(String msg) has a parameter named msg.
 
+        //When an overridden method is called through a superclass reference, Java determines which version
+        // of the method to execute (Dynamic Method Dispatch) based upon the type of the object being referred to
+        // It is the type of the object being referred to (not the type of the reference variable) that
+        // determines which overridden method is executed.
+
+        //Therefore, if a superclass contains a method that is overridden by a sublcass, then when different
+        // types of objects are referred to through a superclass reference variable,
+        // different versions of the methods are executed.
+
 
         zizi.showKinship();
         zizi.showKinship(" I am a Feline, and my name is :");
+        AnimalsMam katie = zizi;// This shows that when creating katie as a variable for the superclass AnimalsMam,
+                                // referencing an object(zizi) from the subclass Felines-Cats,
+                                // the showKinship() method from Cats overrides the homonymous method in superclass.
+        katie.showKinship();
+        AnimalsMam darnel = tg1;
+        darnel.showKinship();
+
         // Cats miaunel = tiggy; it is not going to compile,
         // Incompatible types, a reference variable of class type can not
         // refer to an object of another class type
