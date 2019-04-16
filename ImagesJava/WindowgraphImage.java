@@ -50,15 +50,14 @@ class MyDrawPanel extends JPanel {
 //            JPanel panel = new JPanel;
             Graphics2D g2d = (Graphics2D) g;
 
+          Image image = new ImageIcon("C:\\Users\\postelnicu\\IdeaProjects\\FlorinJavaG\\src\\IntroJavaSwing01\\ImagesFolder\\katie.jpg").getImage();
 
-            Image image = new ImageIcon("katie.jpg").getImage();
+
+
+
             System.out.println("Acum");
             g2d.drawImage(image, 3, 4, this);
 
-//            BufferedImage imag = ImageIO.read(new File("./katie.jpg"));
-//            JLabel label = new JLabel(new ImageIcon (imag));
-//            panel.add(label);
 //
-//        }
 
         }}}
