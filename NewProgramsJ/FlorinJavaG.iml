@@ -12,6 +12,6 @@
     <orderEntry type="library" name="json-simple-1.1.1.jar1" level="project" />
     <orderEntry type="library" name="json-simple-1.1.1-sources.jar" level="project" />
     <orderEntry type="library" name="json-simple-1.1-bundle.jar" level="project" />
-    <orderEntry type="library" name="json-simple-1.1.1 (1)" level="project" />
+    <orderEntry type="library" name="json-simple-1.1.1 (1)" level="project" />// this is the one working
   </component>
 </module>
