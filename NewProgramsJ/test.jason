@@ -1,6 +1,81 @@
-{
-  "age" : 100,
-  "name" : " Monkey King",
-  "messages" : ["msg 1", "msg 2", "msg 3"]
 
+{
+"IDnumber" :"4407568",
+"FirstName": "Fred",
+"Surname": "Smith",
+"Age": 15,
+"Address": {
+"Street": "Hursley Park",
+"City": "Winchester",
+"Postcode": "SO21 2JN"
+},
+"ContactPhones": [
+{
+"type": "home",
+"number": "0203 544 1234"
+},
+{
+"type": "Mother Cell",
+"number": "01962 001234"
+},
+{
+"type": "Father Cell",
+"number": "01962 001235"
+},
+{
+"type": "mobile",
+"number": "077 7700 1234"
+}
+],
+"StudentSchedule" : [
+{
+  "type": "1st Math",
+  "teacher": "Mrs. Hanum ",
+  "teacher's email": "Hanum@jensy.org",
+},
+{
+"type":"2nd English H",
+"teacher": "Mrs. Zimmy",
+"teacher's email": "ZimmyB@jensy.org"
+},
+{
+"type": "3rd Chem",
+"teacher": "Mr. Kolmogorov",
+"teacher's email":"kolomog@jensy.org"
+},
+{
+"type": "4th Robotics",
+"teacher": "Mr. Ionas",
+"teacher's email"  : "Ionas@whale.belly"
+},
+{
+"type": " 5th CS AP A",
+"teacher":"Mr. Kosty'l"
+"teacher's email": "kostyl@itude.net"
+},
+{
+"type": " 5th LUNCH" ,
+"teacher": "N. Osepervi",
+"teacher's email":"krafterya@cafeterio.food"
+}
+],
+"Email": [
+{
+"type": "work",
+"address": ["fred.smith@my-work.com", "fsmith@my-work.com"]
+},
+{
+"type": "home",
+"address": ["freddy@my-social.com", "frederic.smith@very-serious.com"]
+}
+],
+"Other": {
+"Over 18 ?": true,
+"Misc": null,
+"Alternative.Address": {
+"Street": "Brick Lane",
+"City": "London",
+"Postcode": "E1 6RF"
+}
+}
 }
