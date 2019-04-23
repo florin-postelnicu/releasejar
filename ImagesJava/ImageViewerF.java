@@ -8,6 +8,10 @@ import javax.swing.*;
 
 /*
 Program for viewing images
+You can choose any images from your files
+and set it as a label.
+The program creates access to all your files, gets a selected image file, and
+sets it up as a label.
  */
 public class ImageViewerF {
     public static void main(String[] args) {
