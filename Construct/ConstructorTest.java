@@ -1,5 +1,14 @@
 package mypackage01;
-
+/*
+Using three constructors: a default constructor, a limited constructor, and a complete constractor.
+The program shows many of the features that we discussed in this section:4.6.6 and 4.6.7 Core Java
+• Overloaded constructors 
+• A call to another constructor with this(...)
+• A no-argument constructor 
+• An object initialization block 
+• A static initialization block
+• An instance field initialization 
+*/
 import java.util.*;
 
 public class ConstructorTest {
