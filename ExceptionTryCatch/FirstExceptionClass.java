@@ -50,6 +50,7 @@ public class FirstExceptionClass {
             throw new BadException();
 //
         }
+        System.out.println("You good baby!");
     }
 
     public void crossFingers() {
