@@ -27,6 +27,15 @@ and put your exception handling/recovery code in the catch block.
 9) If you are not prepared to handle the exception, you can make the compiler
 'ducking' the exception.
 
+10) the finally block lets you put all your cleanup code in ONE place,
+instead of duplicating it:
+        finally{
+            System.out.println("We are done, and it is better to go to sleep!");
+        }
+Notes :
+ If the try  block fails(an exception), flow control immediately moves to catch block.
+ When the catch block completes , the finally block runs.
+ When the finally block completes, the rest of the method continues.
  */
 
 
@@ -62,8 +71,13 @@ public class FirstExceptionClass {
         }catch (BadException ex){
             System.out.println("Arrrgh");
 //            ex.printStackTrace();
+        }finally{
+            System.out.println("We are done, and it is better to go to sleep!");
         }
+        System.out.println("Just to check what's coming after finally!");
+
     }
+
 
     public static void main(String[] args) {
 
