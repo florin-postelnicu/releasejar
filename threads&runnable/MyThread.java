@@ -1,3 +1,8 @@
+/*
+Example of a class MyThread that is a child of (It extends) Thread
+ */
+
+
 public class MyThread extends Thread{
 
     public MyThread(String name){
@@ -18,10 +23,10 @@ public class MyThread extends Thread{
         Thread.sleep(5000);
     }
 
-    public static void main(String[] args) {
-        MyThread myt = new MyThread("carcalete");
-        myt.run();
-    }
+//    public static void main(String[] args) {
+//        MyThread myt = new MyThread("carcalete");
+//        myt.run();
+//    }
 
 }
 
